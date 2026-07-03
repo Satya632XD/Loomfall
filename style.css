@@ -1,0 +1,125 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #05070c;
+  color: #e7eefc;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+#app, #gameCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#gameCanvas {
+  display: block;
+  background: radial-gradient(circle at top, #11182c 0%, #060910 55%, #020305 100%);
+  cursor: crosshair;
+}
+
+#ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#hud {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.brand {
+  letter-spacing: 0.32em;
+  font-weight: 800;
+  font-size: 14px;
+  opacity: .92;
+}
+
+#status {
+  max-width: 340px;
+  font-size: 13px;
+  line-height: 1.45;
+  opacity: .92;
+}
+
+.debug {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  min-width: 220px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(6, 10, 18, 0.72);
+  border: 1px solid rgba(120, 170, 255, 0.14);
+  backdrop-filter: blur(8px);
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, rgba(22, 32, 56, 0.45), rgba(3, 5, 8, 0.82));
+  pointer-events: auto;
+}
+
+.menu-card {
+  width: min(560px, calc(100vw - 32px));
+  padding: 28px 28px 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(150, 190, 255, 0.18);
+  background: rgba(8, 12, 20, 0.75);
+  box-shadow: 0 20px 80px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+.menu-card h1 {
+  margin: 0 0 10px;
+  font-size: 42px;
+  letter-spacing: 0.08em;
+}
+
+.menu-card p {
+  margin: 8px 0;
+  opacity: .9;
+  line-height: 1.5;
+}
+
+#playButton {
+  margin-top: 14px;
+  padding: 12px 20px;
+  font: inherit;
+  font-weight: 700;
+  color: #eef4ff;
+  border: 1px solid rgba(156, 196, 255, 0.22);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(74, 109, 196, 0.9), rgba(41, 64, 129, 0.95));
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+#playButton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.hint {
+  font-size: 12px;
+  opacity: .78;
+}

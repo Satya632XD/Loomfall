@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <title>Loomfall — Browser 3D Prototype</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="ui">
+      <div id="hud">
+        <div class="brand">LOOMFALL</div>
+        <div id="status">Click to enter the Frayed Reach.</div>
+      </div>
+
+      <div id="debugPanel" class="debug hidden"></div>
+
+      <div id="menu" class="menu">
+        <div class="menu-card">
+          <h1>Loomfall</h1>
+          <p>A browser-native 3D world of anchors, threads, and shifting regions.</p>
+          <button id="playButton">Play</button>
+          <p class="hint">WASD move · Mouse look · Space jump · Shift sprint · F3 debug</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
